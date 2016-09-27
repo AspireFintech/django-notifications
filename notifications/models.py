@@ -10,6 +10,7 @@ if StrictVersion(get_version()) >= StrictVersion('1.8.0'):
 else:
     from django.contrib.contenttypes.generic import GenericForeignKey
 
+from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.six import text_type
@@ -18,7 +19,6 @@ from .utils import id2slug
 from .signals import notify
 
 from model_utils import Choices
-from jsonfield.fields import JSONField
 
 from django.contrib.auth.models import Group
 
